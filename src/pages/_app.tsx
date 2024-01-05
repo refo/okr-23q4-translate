@@ -4,6 +4,7 @@ import { createTheme, MantineProvider } from "@mantine/core";
 import "./globals.css";
 import "@mantine/core/styles.css";
 import { MantineNotifications } from "@/components/MantineNotifications";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const theme = createTheme({
   primaryColor: "blue",
@@ -11,9 +12,11 @@ const theme = createTheme({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <MantineProvider theme={theme}>
-      <Component {...pageProps} />
-      <MantineNotifications />
-    </MantineProvider>
+    <ClerkProvider>
+      <MantineProvider theme={theme}>
+        <Component {...pageProps} />
+        <MantineNotifications />
+      </MantineProvider>
+    </ClerkProvider>
   );
 }

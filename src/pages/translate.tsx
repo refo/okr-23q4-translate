@@ -3,10 +3,12 @@ import {
   Box,
   Button,
   Container,
+  Divider,
   FocusTrap,
   ScrollArea,
   Stack,
   Textarea,
+  Title,
 } from "@mantine/core";
 import { getHotkeyHandler } from "@mantine/hooks";
 import { useChat } from "ai/react";
@@ -14,6 +16,7 @@ import { ChangeEvent, useCallback, useEffect, useRef, useState } from "react";
 import { LanguageChooser } from "@/components/LanguageChooser";
 import { UserMessage, BotMessage } from "@/components/Message";
 import { notifications } from "@mantine/notifications";
+import { UserButton } from "@clerk/nextjs";
 
 export default function TranslatePage() {
   const { messages, append, isLoading } = useChat({
@@ -84,6 +87,13 @@ export default function TranslatePage() {
 
   return (
     <Container className="h-full flex flex-col py-5">
+      <div className="flex flex-row justify-between py-1">
+        <Title order={1} fz="xl">
+          Translate
+        </Title>
+        <UserButton showName />
+      </div>
+      <Divider />
       <ScrollArea className="flex-grow" viewportRef={viewport}>
         <Stack className="mb-10" gap="xs">
           {messages.map((message) => {

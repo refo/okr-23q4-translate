@@ -1,15 +1,18 @@
 "use client";
+import { UserButton } from "@clerk/nextjs";
 import {
   Avatar,
   Box,
   Button,
   Container,
+  Divider,
   FocusTrap,
   Group,
   ScrollArea,
   Stack,
   Text,
   Textarea,
+  Title,
 } from "@mantine/core";
 import { getHotkeyHandler } from "@mantine/hooks";
 import { notifications } from "@mantine/notifications";
@@ -54,6 +57,13 @@ export default function ChatPage() {
 
   return (
     <Container className="h-full flex flex-col py-5">
+      <div className="flex flex-row justify-between py-1">
+        <Title order={1} fz="xl">
+          Chat
+        </Title>
+        <UserButton showName />
+      </div>
+      <Divider />
       <ScrollArea className="flex-grow" viewportRef={viewport}>
         <Stack className="mb-10">
           {messages.map((message) => {
