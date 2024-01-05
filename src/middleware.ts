@@ -39,6 +39,9 @@ export default async function middleware(
   request: NextRequest,
   next: NextFetchEvent
 ) {
+  if (request.nextUrl.pathname === "/") {
+    return NextResponse.next();
+  }
   const authMiddlewareResponse = await clerkAuthMiddleware(request, next);
 
   if (!authMiddlewareResponse?.ok) {
