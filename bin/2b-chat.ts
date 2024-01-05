@@ -1,4 +1,5 @@
 import { Message, openai } from "./client";
+import readline from "readline";
 
 // This is our message history.a
 // We'll collect messages from the user and the assistant here.
@@ -44,7 +45,12 @@ I'm your helpful assistant. Ask me anything and when you're done, say "bye".
  * Then, we'll print the response from the API.
  * Finally, we'll print a new prompt for the user.
  */
-for await (const line of console) {
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.on("line", async (line) => {
   messages.push({ role: "user", content: line });
 
   console.log("< assistant:");
@@ -60,4 +66,4 @@ for await (const line of console) {
     process.exit(0);
   }
   console.log("> chat:");
-}
+});
