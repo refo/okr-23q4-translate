@@ -1,6 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Let's explore how can we interact with OpenAI api and create a simple web application.
+This repository is created to support a story published on Medium.
+Visit the story for more information
+
+[OpenAI for Web: A Guide to Building Apps
+](https://medium.com/@ref/openai-for-web-a-guide-to-building-apps-6be87ad17bf8)
+Let’s explore how can we interact with OpenAI api and create a simple web application.
 
 
 ## Getting Started
