@@ -61,7 +61,7 @@ export default function ChatPage() {
         <Title order={1} fz="xl">
           Chat
         </Title>
-        <UserButton showName />
+        <UserButton showName afterSignOutUrl="/" />
       </div>
       <Divider />
       <ScrollArea className="flex-grow" viewportRef={viewport}>

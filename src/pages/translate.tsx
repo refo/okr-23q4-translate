@@ -91,7 +91,7 @@ export default function TranslatePage() {
         <Title order={1} fz="xl">
           Translate
         </Title>
-        <UserButton showName />
+        <UserButton showName afterSignOutUrl="/" />
       </div>
       <Divider />
       <ScrollArea className="flex-grow" viewportRef={viewport}>
