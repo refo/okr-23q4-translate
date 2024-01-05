@@ -12,7 +12,10 @@ const theme = createTheme({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      signInUrl={process.env.CLERK_SIGN_IN_URL}
+      signUpUrl={process.env.CLERK_SIGN_UP_URL}
+    >
       <MantineProvider theme={theme}>
         <Component {...pageProps} />
         <MantineNotifications />
