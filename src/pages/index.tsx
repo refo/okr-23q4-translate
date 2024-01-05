@@ -20,7 +20,9 @@ export default function IndexPage() {
         Use one of the following links to navigate to the example pages:
       </div>
       <SignedOut>
-        <SignInButton>Please sign in to comtinue</SignInButton>
+        <SignInButton>
+          <LinkButton href="/">Please sign in to comtinue</LinkButton>
+        </SignInButton>
       </SignedOut>
       <SignedIn>
         <div className="flex flex-row gap-8">
