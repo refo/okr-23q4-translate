@@ -1,15 +1,18 @@
-# project
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-To install dependencies:
+## Getting Started
 
-```bash
-bun install
-```
-
-To run:
+First, run the development server:
 
 ```bash
-bun run index.ts
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-This project was created using `bun init` in bun v1.0.0. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
